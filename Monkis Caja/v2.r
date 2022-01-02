@@ -4,7 +4,7 @@ rebol [
 ]
 
 do %list-view.r
-
+  
 ;  >>>> TO-DO 
 ; ----- lista 2 
 ; ----- numero de ticket para cada orden

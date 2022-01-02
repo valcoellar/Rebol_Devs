@@ -29,7 +29,7 @@ REBOL [
     See: http://www.hmkdesign.dk/rebol/list-view/docs/list-view-history.html
   ]
 ]
-
+  
 ctx-list: make object! [
   range: make block! []
   old-range: make block! []
