@@ -63,12 +63,12 @@ rango_green: 10
 
 ; ////////// ENCABEZADO PARA CORREO ELECTRONICO ///////
 
-system/user/email: direccion@gruponucleon.com
+system/user/email: mail@yourwebpage.com
 system/user/name: "SISTEMA DE COBRANZA"
-system/schemes/esmtp/host: "mail.gruponucleon.com"
+system/schemes/esmtp/host: "mail.yourwebpage.com"
 system/schemes/esmtp/port-id: 587
-system/schemes/esmtp/user: "direccion@gruponucleon.com"
-system/schemes/esmtp/pass: "Millonario1"
+system/schemes/esmtp/user: "mail@yourwebpage.com"
+system/schemes/esmtp/pass: "Passw"
 
 
 
@@ -88,8 +88,8 @@ iguales:  equal? a b
 valores_control: read %control.txt
 valores_data: read %cobranza.txt
 
-site_file_control: ftp://u144733:Millonario1@www.gruponucleon.com//public_html/control.txt
-site_file_data: ftp://u144733:Millonario1@www.gruponucleon.com//public_html/cobranza.txt
+site_file_control: ftp://user:Passw@www.yourwebpage.com//public_html/control.txt
+site_file_data: ftp://user:Passw@www.yourwebpage.com//public_html/cobranza.txt
 site_files_data_local: read %cobranza.txt
 ; /*/*/*/*/*/*/ end variables /*/*/*/*/*/*/*/*/
 
@@ -378,11 +378,11 @@ tabla: table  [on] options["Factura" left 0.06
 RETURN
 button 30X10 "AGREGAR" [AGREGAR_FACTURA ] ;print tabla/picked print tabla/selected
 button 30X10 "GUARDAR" [save %COBRANZA.txt tabla/data    save %CONTROL.txt tabla/data 
-send/attach valcoellar@gmail.com "Base de datos Cobranza MOSCARO" [%COBRANZA.txt]
+send/attach other@mail.com "Base de datos Cobranza MOSCARO" [%COBRANZA.txt]
 BROKER 
 ]
 button 30X10 "REPORTE" [REPORTE_GENERAL]
-button 30X10 "ENVIAR MAIL" [send/attach valcoellar@gmail.com "Reporte Cobranza Moscaro" [%reporte_cobranza.html] send/attach asistente@grupomoscaro.com "Reporte Cobranza" [%reporte_cobranza.html] send/attach direccion@grupomoscaro.com "Reporte Cobranza" [%reporte_cobranza.html] request/ok  "correo enviado a direccion@grupomoscaro.com  asistente@grupomoscaro.com"  ]  
+button 30X10 "ENVIAR MAIL" [send/attach other@mail.com "Reporte Cobranza Moscaro" [%reporte_cobranza.html] send/attach other@mail.com "Reporte Cobranza" [%reporte_cobranza.html] send/attach direccion@grupomoscaro.com "Reporte Cobranza" [%reporte_cobranza.html] request/ok  "correo enviado a other@mail.com  other@mail.com"  ]  
 ;button 30x10 "EDITAR" [EDITAR tabla/picked print tabla/action]
 text "Grupo Moscaro 2012" 
 button 30X10 "ELIMINAR" [ELIMINAR]
